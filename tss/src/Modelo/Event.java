@@ -9,12 +9,14 @@ public class Event {
     private double longitude;
     private Date date;
     private Date delationDate;
+    private Process process;
 
-    public Event(String description, String locationDescription, Date date, Date delationDate) {
+    public Event(String description, String locationDescription, Date date, Date delationDate, ProcessBuilder processBuilder, StatesNames initialState) {
         this.description = description;
         this.locationDescription = locationDescription;
         this.date = date;
         this.delationDate = delationDate;
+        process=processBuilder.generateProcess(initialState);
     }
 
     public String getDescription() {
@@ -63,5 +65,9 @@ public class Event {
 
     public void setDelationDate(Date delationDate) {
         this.delationDate = delationDate;
+    }
+
+    public Process getProcess() {
+        return process;
     }
 }
