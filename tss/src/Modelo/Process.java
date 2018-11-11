@@ -18,8 +18,8 @@ public class Process {
         return evolution;
     }
 
-    public void setEvolution(ArrayList<State> evolution) {
-        this.evolution = evolution;
+    public void addState(State state) {
+        evolution.add(state);
     }
 
     public State getFinalState() {
