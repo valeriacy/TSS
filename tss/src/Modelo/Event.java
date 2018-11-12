@@ -1,50 +1,83 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Modelo;
 
-/**
- *
- * @author Equipo
- */
 import java.util.Date;
 public class Event {
-    private String  description, location;
-    private Date eventDate; 
+    private String description;
+    private String locationDescription;
+    private double latitude;
+    private double longitude;
+    private Date date;
     private Date delationDate;
-    private int duration;
-   
-    public String getdescriptionE(){
+    private Process process;
+
+    public Event(String description, String locationDescription, Date date, Date delationDate, ProcessBuilder processBuilder, StatesNames initialState) {
+        this.description = description;
+        this.locationDescription = locationDescription;
+        this.date = date;
+        this.delationDate = delationDate;
+        process=processBuilder.generateProcess(initialState);
+    }
+
+    public String getDescription() {
         return description;
     }
- 
-    public void setdescriptionE(String descripcion){
-        description=descripcion;
+
+    public void setDescription(String description) {
+        this.description = description;
     }
-    
-    public String geteventLocation(){
-        return location;
+
+    public String getLocationDescription() {
+        return locationDescription;
     }
-    
-    public void seteventLocation (String evento){
-        location=evento;
+
+    public void setLocationDescription(String locationDescription) {
+        this.locationDescription = locationDescription;
     }
-    
-    public Date getEventDate(){
-        return eventDate;
+
+    public double getLatitude() {
+        return latitude;
     }
-    
-    public void setEventDate (Date dia){
-        eventDate= dia;
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
     }
-    
-    public Date getdelationDate(){
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public Date getDelationDate() {
         return delationDate;
     }
-    
-    public void setdelationDate (Date  diaD){
-       delationDate=diaD;
+
+    public void setDelationDate(Date delationDate) {
+        this.delationDate = delationDate;
+    }
+
+    public Process getProcess() {
+        return process;
+    }
+
+    @Override
+    public String toString(){
+        String output="Description del evento: "+description+"\n";
+        output+="Sucedio en: "+locationDescription+"\n";
+        output+="El hecho ocurrio el "+date+"\n";
+        output+="Se presento la denuncia el "+delationDate+"\n";
+        output+="Descripcion del proceso:\n\n---------------------------- \n"+process;
+        return output;
     }
 }
