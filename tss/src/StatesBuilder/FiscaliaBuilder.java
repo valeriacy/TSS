@@ -30,8 +30,8 @@ public class FiscaliaBuilder implements StateBuilder{
     }
 
     private boolean hasFailed(){
-        int randomNumber = (int) (random.nextDouble()*2);
-        boolean isFailed=randomNumber>1;
+        int randomNumber = (int) (random.nextDouble()*10);
+        boolean isFailed=randomNumber>5;
         if(isFailed){
             description+="\n El acusado escapo xdxd, no se puede continuar con el caso";
         }

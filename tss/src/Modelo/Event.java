@@ -77,7 +77,7 @@ public class Event {
         output+="Sucedio en: "+locationDescription+"\n";
         output+="El hecho ocurrio el "+date+"\n";
         output+="Se presento la denuncia el "+delationDate+"\n";
-        output+="Descripcion del proceso:\n---------------------------- \n\n"+process;
+        output+="Descripcion del proceso:\n\n---------------------------- \n"+process;
         return output;
     }
 }
