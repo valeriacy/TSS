@@ -54,9 +54,9 @@ public class State {
         String output=description+"\n este estado duro: ";
         int days=msToDays();
         if(days>0){
-            output+=days+" dias";
+            output+=days+" dia(s)";
         }else {
-            output+=days+" algunas horas";
+            output+=" algunas horas";
         }
         return output;
     }

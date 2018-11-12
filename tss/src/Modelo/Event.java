@@ -73,11 +73,11 @@ public class Event {
 
     @Override
     public String toString(){
-        String output=description+"\n";
-        output+="Sucedio en "+locationDescription+"\n";
-        output+="El hecho ocurrio "+date+"\n";
-        output+="Se presneto la denuncia "+delationDate+"\n";
-        output+="Descripcion del proceso:\n"+process;
+        String output="Description del evento: "+description+"\n";
+        output+="Sucedio en: "+locationDescription+"\n";
+        output+="El hecho ocurrio el "+date+"\n";
+        output+="Se presento la denuncia el "+delationDate+"\n";
+        output+="Descripcion del proceso:\n---------------------------- \n\n"+process;
         return output;
     }
 }

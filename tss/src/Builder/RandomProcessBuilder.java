@@ -13,7 +13,7 @@ public class RandomProcessBuilder implements ProcessBuilder{
     public Process generateProcess(StatesNames initialState){
         Process process=new Process();
         StateBuilder builder=InitialStateFactory.getInitialState(initialState);
-        while (builder.hasNextBuilder()){
+        while (builder!=null){
             State generatedState=builder.buildState();
             process.addState(generatedState);
             builder=builder.nextStateBuilder();
