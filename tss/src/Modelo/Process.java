@@ -8,7 +8,6 @@ import java.util.ArrayList;
 public class Process {
 
     private ArrayList<State> evolution;
-    private State finalState;
 
     public Process(){
         evolution=new ArrayList<>();
@@ -22,11 +21,12 @@ public class Process {
         evolution.add(state);
     }
 
-    public State getFinalState() {
-        return finalState;
-    }
-
-    public void setFinalState(State finalState) {
-        this.finalState = finalState;
+    @Override
+    public String toString(){
+        String output="";
+        for(State state : evolution){
+            output+=state+"\n---------------------------- \n";
+        }
+        return output;
     }
 }
