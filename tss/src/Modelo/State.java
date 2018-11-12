@@ -4,14 +4,12 @@ public class State {
     private String name;
     private String description;
     private boolean hasFailed;
-    private boolean canFail;
     private int msDuration;
 
-    public State(String name, String description, boolean hasFailed, boolean canFail, int msDuration) {
+    public State(String name, String description, boolean hasFailed, int msDuration) {
         this.name = name;
         this.description = description;
         this.hasFailed = hasFailed;
-        this.canFail = canFail;
         this.msDuration = msDuration;
     }
 
@@ -39,19 +37,27 @@ public class State {
         this.hasFailed = hasFailed;
     }
 
-    public boolean isCanFail() {
-        return canFail;
-    }
-
-    public void setCanFail(boolean canFail) {
-        this.canFail = canFail;
-    }
-
     public int getMsDuration() {
         return msDuration;
     }
 
     public void setMsDuration(int msDuration) {
         this.msDuration = msDuration;
+    }
+
+    private int msToDays(){
+        return msDuration/10;
+    }
+
+    @Override
+    public String toString(){
+        String output=description+"\n este estado duro: ";
+        int days=msToDays();
+        if(days>0){
+            output+=days+" dias";
+        }else {
+            output+=days+" algunas horas";
+        }
+        return output;
     }
 }
