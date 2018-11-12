@@ -70,4 +70,14 @@ public class Event {
     public Process getProcess() {
         return process;
     }
+
+    @Override
+    public String toString(){
+        String output="Description del evento: "+description+"\n";
+        output+="Sucedio en: "+locationDescription+"\n";
+        output+="El hecho ocurrio el "+date+"\n";
+        output+="Se presento la denuncia el "+delationDate+"\n";
+        output+="Descripcion del proceso:\n\n---------------------------- \n"+process;
+        return output;
+    }
 }
