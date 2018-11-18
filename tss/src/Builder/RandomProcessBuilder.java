@@ -1,14 +1,14 @@
 package Builder;
 
 import Modelo.Process;
-import Modelo.ProcessBuilder;
+import Modelo.ProcessConstructor;
 import Modelo.State;
 import Modelo.StatesNames;
 
 /**
  * Created by Jp on 11/11/2018.
  */
-public class RandomProcessBuilder implements ProcessBuilder{
+public class RandomProcessBuilder implements ProcessConstructor {
 
     public Process generateProcess(StatesNames initialState){
         Process process=new Process();

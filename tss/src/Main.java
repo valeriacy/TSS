@@ -1,6 +1,6 @@
 import Builder.RandomProcessBuilder;
 import Modelo.Event;
-import Modelo.ProcessBuilder;
+import Modelo.ProcessConstructor;
 import Modelo.StatesNames;
 
 import java.util.Date;
@@ -18,7 +18,8 @@ public class Main {
         Date eventDate=new Date(systemMs);
         Date eventDelationDate=new Date(systemMs+10000);
         StatesNames initialState=StatesNames.FELCV;
-        ProcessBuilder processBuilder=new RandomProcessBuilder();
+
+        ProcessConstructor processBuilder=new RandomProcessBuilder();
         Event event=new Event(eventDescription,
                               eventLocationDescription,
                               eventDate,

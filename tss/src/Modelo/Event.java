@@ -11,7 +11,7 @@ public class Event {
     private Date delationDate;
     private Process process;
 
-    public Event(String description, String locationDescription, Date date, Date delationDate, ProcessBuilder processBuilder, StatesNames initialState) {
+    public Event(String description, String locationDescription, Date date, Date delationDate, ProcessConstructor processBuilder, StatesNames initialState) {
         this.description = description;
         this.locationDescription = locationDescription;
         this.date = date;
