@@ -103,3 +103,5 @@ fabric.properties
 /tss/.classpath
 /tss/.project
 /tss/src/Diagrama.ucls
+/tss/.idea/artifacts/tss_jar.xml
+/tss/.idea/uiDesigner.xml
