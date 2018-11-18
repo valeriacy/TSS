@@ -24,16 +24,16 @@ public class FiscaliaBuilder implements StateBuilder{
         fiscaliaName =StatesNames.FISCALIA;
         description ="Documento ingresado en las oficinas de la fiscalia";
         hasFailed = hasFailed();
-        maxDuration = 30;
+        maxDuration = 140;
         msDuration = generateDuration();
         nextStateBuilder=new InvestigacionBuilder(hasFailed);
     }
 
     private boolean hasFailed(){
         int randomNumber = (int) (random.nextDouble()*10);
-        boolean isFailed=randomNumber>5;
+        boolean isFailed=randomNumber>7;
         if(isFailed){
-            description+="\n El acusado escapo xdxd, no se puede continuar con el caso";
+            description+="\n El acusado no se presento en la fecha citada";
         }
         return isFailed;
     }

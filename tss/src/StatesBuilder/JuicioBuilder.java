@@ -22,7 +22,7 @@ public class JuicioBuilder implements StateBuilder{
     public JuicioBuilder(boolean hasPreviousStateFailed){
         random= new Random();
         juicioName =StatesNames.JUICIO;
-        maxDuration = 20;
+        maxDuration = 70;
         generateByPreviousState(hasPreviousStateFailed);
         nextStateBuilder=null;
     }
@@ -40,8 +40,8 @@ public class JuicioBuilder implements StateBuilder{
     }
 
     private boolean hasFailed(){
-        int randomNumber = (int) (random.nextDouble()*2);
-        boolean isFailed=randomNumber>1;
+        int randomNumber = (int) (random.nextDouble()*10);
+        boolean isFailed=randomNumber>3;
         if(isFailed){
             description+="\n No se logro comprobar la culpa del acusado, este queda libre y sin cargos";
         }else {

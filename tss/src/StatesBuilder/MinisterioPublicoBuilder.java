@@ -23,7 +23,7 @@ public class MinisterioPublicoBuilder implements StateBuilder{
         minPubName =StatesNames.MINISTERIO_PUBLICO;
         description ="Documento ingresado en las oficinas del ministerio publico";
         hasFailed = false;
-        maxDuration = 20;
+        maxDuration = 50;
         msDuration = generateDuration();
         nextStateBuilder=new FiscaliaBuilder();
     }

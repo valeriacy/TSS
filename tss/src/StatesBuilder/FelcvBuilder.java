@@ -24,7 +24,7 @@ public class FelcvBuilder implements StateBuilder {
         felcvName =StatesNames.FELCV;
         description ="Documento ingresado en las oficinas de FELCv";
         hasFailed = false;
-        maxDuration = 20;
+        maxDuration = 50;
         msDuration = generateDuration();
         nextStateBuilder=new MinisterioPublicoBuilder();
     }

@@ -21,7 +21,7 @@ public class InvestigacionBuilder implements StateBuilder {
     public InvestigacionBuilder(boolean hasPreviousStateFailed){
         random= new Random();
         investigacionName =StatesNames.INVESTIGACION;
-        maxDuration = 30;
+        maxDuration = 140;
         generateByPreviousState(hasPreviousStateFailed);
         nextStateBuilder=new JuicioBuilder(hasFailed);
     }
@@ -39,8 +39,8 @@ public class InvestigacionBuilder implements StateBuilder {
     }
 
     private boolean hasFailed(){
-        int randomNumber = (int) (random.nextDouble()*2);
-        boolean isFailed=randomNumber>1;
+        int randomNumber = (int) (random.nextDouble()*10);
+        boolean isFailed=randomNumber>4;
         if(isFailed){
             description+="\n No se encontraron suficientes pruebas, el caso se archiva";
         }else {
