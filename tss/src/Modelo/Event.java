@@ -3,6 +3,7 @@ package Modelo;
 
 import java.util.Date;
 public class Event {
+    private String id;
     private String description;
     private String locationDescription;
     private double latitude;
@@ -11,12 +12,21 @@ public class Event {
     private Date delationDate;
     private Process process;
 
-    public Event(String description, String locationDescription, Date date, Date delationDate, ProcessConstructor processBuilder, StatesNames initialState) {
+    public Event(String id, String description, String locationDescription, Date date, Date delationDate, ProcessConstructor processBuilder, StatesNames initialState) {
+        this.id=id;
         this.description = description;
         this.locationDescription = locationDescription;
         this.date = date;
         this.delationDate = delationDate;
         process=processBuilder.generateProcess(initialState);
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getDescription() {

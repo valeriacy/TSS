@@ -22,7 +22,7 @@ public class FelcvBuilder implements StateBuilder {
     public FelcvBuilder(){
         random= new Random();
         felcvName =StatesNames.FELCV;
-        description ="Documento ingresado en las oficinas de FELCv";
+        description ="Documento ingresado en las oficinas de FELCV";
         hasFailed = false;
         maxDuration = 50;
         msDuration = generateDuration();

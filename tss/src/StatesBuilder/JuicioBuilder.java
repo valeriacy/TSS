@@ -45,7 +45,7 @@ public class JuicioBuilder implements StateBuilder{
         if(isFailed){
             description+="\n No se logro comprobar la culpa del acusado, este queda libre y sin cargos";
         }else {
-            description+="\n Se logra comprobar la culpa del acusado y este es sentenciado a cadena perpetua xdxdxd";
+            description+="\n Se logra comprobar la culpa del acusado y este es sentenciado a cadena perpetua";
         }
         return isFailed;
     }
