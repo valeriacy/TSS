@@ -33,7 +33,7 @@ public class FiscaliaBuilder implements StateBuilder{
         int randomNumber = (int) (random.nextDouble()*10);
         boolean isFailed=randomNumber>7;
         if(isFailed){
-            description+="\n El acusado no se presento en la fecha citada";
+            description+="\n El juzgado accionado no presento alegatos de defensa";
         }
         return isFailed;
     }

@@ -28,7 +28,9 @@ public class InvestigacionBuilder implements StateBuilder {
 
     private void generateByPreviousState(boolean hasFailed){
         if(hasFailed){
-            description ="No se llego a esta instancia del proceso";
+            description ="No se llego a esta instancia del proceso." +
+                        "\n En dicho proceso la accionante presento varias pruebas documentales" +
+                        "\n y testimoniales, que a us juicio no fueron valoradas debidamente.";
             this.hasFailed = true;
             msDuration = 0;
         }else {
